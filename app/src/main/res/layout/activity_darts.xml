@@ -1,0 +1,625 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Darts"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 1"
+                android:id="@+id/p1TextView"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:width="225dp"
+                android:gravity="center" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Game"
+                android:onClick="reset"
+                android:id="@+id/newGameButton" />
+
+            <TextView
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:text="Player 2"
+                android:id="@+id/p12extView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000"
+                android:id="@+id/p1ScoreTextView"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginRight="260dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000"
+                android:id="@+id/p2ScoreTextView"
+                android:textStyle="bold"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p12001button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p12002button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p12003button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p120ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <TextView
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:id="@+id/textView20"
+                android:textSize="30sp"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p220ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p22001button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p22002button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p22003button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p11901button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p11902button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p11903button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p119ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <TextView
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:text="19"
+                android:id="@+id/textView19"
+                android:textSize="30sp"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p219ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p21901button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p21902button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p21903button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p11801button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p11802button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p11803button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p118ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <TextView
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:text="18"
+                android:id="@+id/textView18"
+                android:textSize="30sp"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p218ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p21801button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p21802button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p21803button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p11701button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p11702button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p11703button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p117ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <TextView
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:text="17"
+                android:id="@+id/textView17"
+                android:textSize="30sp"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p217ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p21701button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p21702button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p21703button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p11601button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p11602button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p11603button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p116ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+
+            <TextView
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:text="16"
+                android:id="@+id/textView16"
+                android:textSize="30sp"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p216ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p21601button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p21602button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p21603button"
+                android:visibility="invisible"
+                android:onClick="addScore" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p11501button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:onClick="addScore"
+                android:id="@+id/p11502button"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p11503button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p115ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <TextView
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:id="@+id/textView15"
+                android:textSize="30sp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p215ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p21501button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p21502button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p21503button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p12501button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:onClick="addScore"
+                android:id="@+id/p12502button"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p12503button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p125ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <TextView
+                android:layout_width="73dp"
+                android:layout_height="wrap_content"
+                android:text="Bull"
+                android:id="@+id/textView25"
+                android:textSize="30sp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/p225ImageView"
+                android:onClick="increment"
+                android:src="@drawable/ic_000" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1X"
+                android:id="@+id/p22501button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2X"
+                android:id="@+id/p22502button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3X"
+                android:id="@+id/p22503button"
+                android:onClick="addScore"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
